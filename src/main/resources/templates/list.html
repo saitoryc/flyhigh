@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+
+    <title>flyway環境一覧</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom styles for this template -->
+    <style>
+    <!--
+    body {
+        padding-top: 70px;
+    }
+    .navbar-brand {
+        font-size: 24px;
+    }
+    .form-group {
+        margin-bottom: 5px;
+    }
+    -->
+    </style>
+</head>
+
+<body>
+    <div id="header" th:include="common/header :: header (active='countryList')"></div>
+
+    <div class="container">
+        <table class="table table-condensed table-borderd table-striped">
+            <thead>
+                <tr class="info">
+                    <th>ID</th>
+                    <th>環境名</th>
+                    <th>URL</th>
+                    <th>ユーザ名</th>
+                    <th>最新適用スクリプト</th>
+                    <th>バージョン</th>
+                    <th>最終適用日</th>
+                    <th>ステータス</th>
+                </tr>
+            </thead>
+            <tbody th:remove="all-but-first" th:each="setting : ${settings}">
+                <tr>
+                    <td th:text="${setting.id}">ID</td>
+                    <td th:text="${setting.env}">env</td>
+                    <td th:text="${setting.url}">url</td>
+                    <td th:text="${setting.user}">user-name</td>
+                    <td th:text="${setting.script}">script</td>
+                    <td th:text="${setting.version}">verseion</td>
+                    <td th:text="${setting.executionTime}">execTime</td>
+                    <td th:text="${setting.status}">status</td>
+                </tr>
+                <tr>
+                    <td>1234567</td>
+                    <td>テスト環境1</td>
+                    <td>aaaaaa</td>
+                    <td>flywaysample</td>
+                    <td>V1__Create_user_table.sql</td>
+                    <td>1</td>
+                    <td>2017-08-21 07:27:24.0</td>
+                    <td>Success</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/jquery3/js/jquery.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

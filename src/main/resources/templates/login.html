@@ -1,0 +1,64 @@
+<!DOCTYPE html "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="ja">
+<head>
+    <title>ログイン</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- Bootstrap core CSS -->
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom styles for this template -->
+    <style>
+    <!--
+    body {
+        padding-top: 70px;
+    }
+    .navbar-brand {
+        font-size: 24px;
+    }
+    .form-group {
+        margin-bottom: 5px;
+    }
+    -->
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-push-3 col-md-6">
+                <div class="form-wrap">
+                    <div class="text-center"><h1>WebApp@ - Basic</h1></div>
+                    <br />
+                    <form role="form" action="#" method="post" id="login-form" autocomplete="off">
+                        <div class="form-group">
+                            <label for="id" class="sr-only">ID</label>
+                            <input type="text" name="id" id="id" class="form-control" placeholder="ログインID">
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="sr-only">Password</label>
+                            <input type="password" name="password" id="password" class="form-control" placeholder="パスワード">
+                        </div>
+                        <br />
+                        <button id="btn-login" class="btn btn-primary btn-block">ログイン</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/jquery3/js/jquery.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+    <!--
+    $(document).ready(function() {
+        $('#id').focus();
+    });
+    -->
+    </script>
+</body>
+</html>
